@@ -1,7 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.madx.updatechecker.lib">
-
-    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Remember to add android.permission.INTERNET in your main application-->
     <application android:allowBackup="true"
         android:label="@string/app_name">
     </application>
