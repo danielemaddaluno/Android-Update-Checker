@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UpdateCheckerLib</string>
+
+    <string name="ok">OK</string>
+    <string name="yes">SI</string>
+    <string name="no">NO</string>
+
+    <!-- Ora ultima verifica di aggiornamento -->
+    <string name="last_update_test_preferences">Last_Update_Check</string>
+
+    <!-- Usato nella alert di caricamento -->
+    <string name="please_wait">Attendere prego</string>
+    <string name="loading">Sto caricando&#8230;</string>
+    <string name="update_test">Verifico l\'aggiornamento&#8230;</string>
+
+    <!-- Usato nelle dialog per la verifica degli aggiornamenti -->
+    <string name="you_are_updated_title">La tua applicazione è già aggiornata</string>
+    <string name="you_are_not_updated_title">La tua applicazione non è aggiornata</string>
+    <string name="you_are_updated_message">La tua applicazione risulta essere già aggiornata alla ultima versione disponibile.\nPremi OK per uscire.</string>
+    <string name="you_are_not_updated_message">Premi SI per aggiornare la applicazione su Google Play, premi NO per uscire.</string>
+</resources>
