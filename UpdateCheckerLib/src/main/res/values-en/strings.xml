@@ -16,20 +16,16 @@
   -->
 <resources>
     <string name="app_name">UpdateCheckerLib</string>
+    <string name="last_update_test_preferences">Last_Update_Check</string>
 
     <string name="ok">OK</string>
     <string name="yes">YES</string>
     <string name="no">NO</string>
 
-    <!-- Ora ultima verifica di aggiornamento -->
-    <string name="last_update_test_preferences">Last_Update_Check</string>
-
-    <!-- Usato nella alert di caricamento -->
     <string name="please_wait">Please Wait</string>
     <string name="loading">Loading&#8230;</string>
     <string name="update_test">Checking for updates&#8230;</string>
 
-    <!-- Usato nelle dialog per la verifica degli aggiornamenti -->
     <string name="you_are_updated_title">The app is already updated</string>
     <string name="you_are_not_updated_title">The app is not updated</string>
     <string name="you_are_updated_message">Your app is already updated to the latest version available.\nPress OK to exit.</string>
