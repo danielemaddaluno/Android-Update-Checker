@@ -1,10 +1,10 @@
-# ![Logo](https://raw.githubusercontent.com/danielemaddaluno/Android-Update-Checker/master/app/src/main/res/drawable-mdpi/ic_launcher.png) Android Update Checker
+# ![Logo](https://raw.githubusercontent.com/danielemaddaluno/Android-Update-Checker/master/app/src/main/res/drawable-mdpi/ic_launcher.png) Android Update Checker [![Google Play](http://developer.android.com/images/brand/en_generic_rgb_wo_60.png)](https://play.google.com/store/apps/details?id=com.madx.updatechecker)
 
-This project aims to provide a reusable instrument for testing asynchronously if it was released a newer version of the app on the store.
+The project aims to provide a reusable instrument to check asynchronously if exists any newer released update of your app on the Store.
 
 It uses the Java HTML Parser [Jsoup](http://jsoup.org/) to test if a new update really exists parsing the app page on the Google Play Store.
 
-![Screenshot](https://raw.githubusercontent.com/danielemaddaluno/Android-Update-Checker/master/images/readme/readme_info.png)
+![Screenshot](https://raw.githubusercontent.com/danielemaddaluno/Android-Update-Checker/master/images/readme_info/readme_info.png)
 
 
 ## Quick Setup
@@ -12,7 +12,7 @@ It uses the Java HTML Parser [Jsoup](http://jsoup.org/) to test if a new update 
 ### 1. Include library
 
 **Manual - Using [Android Studio](https://developer.android.com/sdk/installing/studio.html):**
- * Download the UpdateCheckerLib folder and copy to your root application folder
+ * Download the UpdateCheckerLib folder and import to your root application folder
  * File -> Project Structure -> in Modules section click on "app" -> Click on tab "Dependecies" -> Click on the green plus -> Module Dependecy -> Select ":UpdateCheckerLib"
  * Done =)
 
@@ -44,7 +44,7 @@ public class DemoUpdateCheckerActivity extends ActionBarActivity {
         new UpdateRunnable(this, new Handler()).start();
     }
 
-    /** Called when the user clicks the Send button */
+    /** Called when the user clicks the button */
     public void forceUpdateTest(View view) {
         if(view.getId() == R.id.button_force_update_test){
             /* Use this if an update check is explicitly requested by a user action */
