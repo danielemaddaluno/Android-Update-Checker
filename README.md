@@ -12,7 +12,12 @@ It uses the Java HTML Parser [Jsoup](http://jsoup.org/) to test if a new update 
 ### 1. Include library
 
 **Manual - Using [Android Studio](https://developer.android.com/sdk/installing/studio.html):**
- * Download the UpdateCheckerLib folder and import to your root application folder
+ * Download the UpdateCheckerLib folder and import to your root application folder. 
+You can manually achieve this step with 3 steps: 
+    1. Paste the folder UpdateCheckerLib into your application at the same level of your app, build and gradle folder
+    2. Add to your settings.gradle file the following code line:
+    "include ':app', ':UpdateCheckerLib'"
+    3. Rebuild the project
  * File -> Project Structure -> in Modules section click on "app" -> Click on tab "Dependecies" -> Click on the green plus -> Module Dependecy -> Select ":UpdateCheckerLib"
  * Done =)
 

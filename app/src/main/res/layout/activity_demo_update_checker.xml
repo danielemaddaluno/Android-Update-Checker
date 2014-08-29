@@ -34,7 +34,7 @@
         android:layout_gravity="center_vertical|center_horizontal"
 
         android:text="@string/button_force_update_test"
-        android:drawableLeft="@drawable/ic_action_collections_cloud"
+        android:drawableLeft="@drawable/ic_launcher"
         android:onClick="forceUpdateTest" />
 
     <TextView

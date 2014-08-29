@@ -15,7 +15,6 @@
   limitations under the License.
   -->
 <resources>
-    <string name="app_name">UpdateCheckerLib</string>
     <string name="last_update_test_preferences">Last_Update_Check</string>
 
     <string name="ok">OK</string>
