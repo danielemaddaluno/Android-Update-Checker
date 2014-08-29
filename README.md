@@ -59,6 +59,15 @@ public class DemoUpdateCheckerActivity extends ActionBarActivity {
 }
 ```
 
+### 4. Proguard
+If you use Proguard you have to add the following lines to your Proguard rules:
+``` java
+-keep public class org.jsoup.** {
+public *;
+}
+```
+
+
 ## License
 
 If you use Android Update Checker code in your application you should inform the author about it ( *email: daniele.maddaluno[at]gmail[dot]com* ) like this:
