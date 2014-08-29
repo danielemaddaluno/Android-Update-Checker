@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.madx.updatechecker.lib;
+package com.madx.updatechecker.lib.utils.orientation;
 
 import android.app.Activity;
 import android.content.Context;
@@ -25,7 +25,7 @@ import android.view.Surface;
 import android.view.WindowManager;
 
 /** Static methods related to device orientation. */
-class OrientationUtils {
+public class OrientationUtils {
 	private OrientationUtils() {}
 
 	/** Locks the device window in landscape mode. */

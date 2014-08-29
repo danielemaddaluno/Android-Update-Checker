@@ -27,6 +27,9 @@ import android.net.Uri;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 
+import com.madx.updatechecker.lib.utils.orientation.OrientationUtils;
+import com.madx.updatechecker.lib.utils.versioning.DefaultArtifactVersion;
+
 import org.jsoup.Jsoup;
 
 
@@ -175,7 +178,6 @@ public class UpdateRunnable implements Runnable {
         });
     }
 
-
     /**
      * Check if you are updated
      *
@@ -209,7 +211,7 @@ public class UpdateRunnable implements Runnable {
                     .select("div[itemprop=softwareVersion]")
                     .first()
                     .ownText();
-            return (value(current_version) < value(new_version));
+            return newer_version_available(current_version, new_version);
         } catch (Exception e) {
             return false;
         }
@@ -261,19 +263,15 @@ public class UpdateRunnable implements Runnable {
     }
 
     /**
-     * Used for comparing different versions of software works as long as the numbers vary between 0 and 99
-     *
-     * @param string the text of the app version
-     * @return a long to compare between them the different software versions
+     * Used for comparing different versions of software
+     * @param local_version_string the version name of the app installed on the system
+     * @param online_version_string the version name of the app released on the Google Play
+     * @return true if a the online_version_string is greater than the local_version_string
      */
-    private long value(String string) {
-        string = string.trim();
-        if (string.contains(".")) {
-            final int index = string.lastIndexOf(".");
-            return value(string.substring(0, index)) * 100 + value(string.substring(index + 1));
-        } else {
-            return Long.valueOf(string);
-        }
+    private static boolean newer_version_available(String local_version_string, String online_version_string){
+        DefaultArtifactVersion local_version_mvn = new DefaultArtifactVersion(local_version_string);
+        DefaultArtifactVersion online_version_mvn = new DefaultArtifactVersion(online_version_string);
+        return local_version_mvn.compareTo(online_version_mvn) == -1 && !local_version_string.equals(new String());
     }
 
     /**
