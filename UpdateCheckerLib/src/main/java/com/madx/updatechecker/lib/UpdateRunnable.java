@@ -63,6 +63,17 @@ public class UpdateRunnable implements Runnable {
      */
     private final String current_version;
     /**
+     * Each time you enter in an Activity which for example called: <b>new UpdateRunnable(this, new Handler()).start();</b>
+     * this is the minimum time which has to pass between an automatic verification of an update and the next automatic verification.
+     */
+    private final long TIME_RETRY_TO_UPDATE;
+
+    private static final long SEC = 1000;
+    private static final long MIN = 60 * SEC;
+    private static final long HOUR = 60 * MIN;
+    private static final long DAY = 24 * HOUR;
+
+    /**
      * <ul>
      * <li>true - use it when the user directly expressed the wish to verify if an update exists</li>
      * <li>false - use it for automatic verification of new updates</li>
@@ -77,17 +88,6 @@ public class UpdateRunnable implements Runnable {
      * A progress dialog to show in a waiting dialog
      */
     private ProgressDialog progress_dialog;
-
-    private static final long SEC = 1000;
-    private static final long MIN = 60 * SEC;
-    private static final long HOUR = 60 * MIN;
-    private static final long DAY = 24 * HOUR;
-
-    /**
-     * Each time you enter in an Activity which for example called: <b>new UpdateRunnable(this, new Handler()).start();</b>
-     * this is the minimum time which has to pass between an automatic verification of an update and the next automatic verification.
-     */
-    private final long TIME_RETRY_TO_UPDATE;
 
     /**
      * Updater Runnable constructor
@@ -218,7 +218,7 @@ public class UpdateRunnable implements Runnable {
     }
 
     /**
-     * Constructs and shows the Dialog in case it is not updated
+     * Builds and shows the Dialog in case it is not updated
      */
     private void show_dialog_you_are_not_updated() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(activity);
@@ -244,7 +244,7 @@ public class UpdateRunnable implements Runnable {
     }
 
     /**
-     * Constructs and shows the Dialog in case it is updated
+     * Builds and shows the Dialog in case it is updated
      */
     private void show_dialog_you_are_updated() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(activity);
@@ -275,19 +275,27 @@ public class UpdateRunnable implements Runnable {
     }
 
     /**
-     * @param context il context
+     * @param context
      * @return the value of preference which represents the last time you verify if an update exists
      */
     private static long getLastTimeTriedUpdate(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context).getLong(context.getString(R.string.last_update_test_preferences), 0);
+        return PreferenceManager.getDefaultSharedPreferences(context).getLong(getLastUpdateTestKey(context), 0);
     }
 
     /**
      * Sets the value of preference which represents the last time you verify if an update exists = the currentTimeMillis in which that function is called
      *
-     * @param context il context
+     * @param context
      */
     private static void setLastTimeTriedUpdate(Context context) {
-        PreferenceManager.getDefaultSharedPreferences(context).edit().putLong(context.getString(R.string.last_update_test_preferences), System.currentTimeMillis()).commit();
+        PreferenceManager.getDefaultSharedPreferences(context).edit().putLong(getLastUpdateTestKey(context), System.currentTimeMillis()).commit();
+    }
+
+    /**
+     * @param context
+     * @return the key String of the Last Update Preference
+     */
+    private static String getLastUpdateTestKey(Context context){
+        return context.getString(R.string.last_update_test_preferences) + "_" + context.getPackageName();
     }
 }
