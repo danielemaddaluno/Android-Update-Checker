@@ -17,7 +17,12 @@
 <resources>
     <string name="app_name">UpdateChecker</string>
     <string name="title_activity_demo_updater">Demo Update Checker</string>
-    <string name="hello_world">Source and Demo code at https://github.com/danielemaddaluno/Android-Update-Checker\n\nTo use the Update Checker automatically, you can call from the <i>onCreate()</i> of your activity the following code line, which will test for updates automatically once a day:\n<b><i>new UpdateRunnable(this, new Handler()).start();</i></b>\n\nOtherwise if the Update Check is requested by a user action you can call the following code line (you can test this function by clicking the button below):\n<b><i>new UpdateRunnable(this, new Handler()).force(true).start();</i></b></string>
+    <string name="hello_world">Source and Demo code at https://github.com/danielemaddaluno/Android-Update-Checker\n\n
+        If the Update Check is requested by a user action you can call the following code line (you can test this function by clicking the button above):\n
+        <b><i>new UpdateRunnable(this, new Handler()).force(true).start();</i></b>\n\n
+        Otherwise if you want to use the Update Checker automatically, you can call from the <i>onCreate()</i> of your activity the following code line, which will test for updates automatically once a day:\n
+        <b><i>new UpdateRunnable(this, new Handler()).start();</i></b>
+    </string>
     <string name="action_settings">Settings</string>
     <string name="button_force_update_test">Force Update Test</string>
 </resources>
