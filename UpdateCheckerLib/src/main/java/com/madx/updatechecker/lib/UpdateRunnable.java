@@ -85,6 +85,10 @@ public class UpdateRunnable implements Runnable {
      */
     private boolean update_available = false;
     /**
+     * Is the theme used dark or not. It is used to specify different cloud drawable in the dialog.
+     */
+    private boolean light_theme = false;
+    /**
      * A progress dialog to show in a waiting dialog
      */
     private ProgressDialog progress_dialog;
@@ -132,6 +136,15 @@ public class UpdateRunnable implements Runnable {
      */
     public UpdateRunnable force(boolean force) {
         this.force = force;
+        return this;
+    }
+
+    /**
+     * @param light_theme if true uses drawables compatible with Light Themes
+     * @return an updater
+     */
+    public UpdateRunnable lightTheme(boolean light_theme) {
+        this.light_theme = light_theme;
         return this;
     }
 
@@ -225,7 +238,7 @@ public class UpdateRunnable implements Runnable {
 
         alertDialogBuilder.setTitle(context.getString(R.string.you_are_not_updated_title));
         alertDialogBuilder.setMessage(context.getString(R.string.you_are_not_updated_message));
-        alertDialogBuilder.setIcon(R.drawable.ic_action_collections_cloud);
+        alertDialogBuilder.setIcon(getCloudDrawable());
         alertDialogBuilder.setCancelable(false);
         alertDialogBuilder.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
@@ -251,7 +264,7 @@ public class UpdateRunnable implements Runnable {
 
         alertDialogBuilder.setTitle(context.getString(R.string.you_are_updated_title));
         alertDialogBuilder.setMessage(context.getString(R.string.you_are_updated_message));
-        alertDialogBuilder.setIcon(R.drawable.ic_action_collections_cloud);
+        alertDialogBuilder.setIcon(getCloudDrawable());
         alertDialogBuilder.setCancelable(false);
         alertDialogBuilder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
@@ -260,6 +273,10 @@ public class UpdateRunnable implements Runnable {
             }
         });
         alertDialogBuilder.show();
+    }
+
+    private int getCloudDrawable(){
+        return light_theme ? R.drawable.ic_action_collections_cloud_light : R.drawable.ic_action_collections_cloud_dark;
     }
 
     /**
@@ -298,4 +315,5 @@ public class UpdateRunnable implements Runnable {
     private static String getLastUpdateTestKey(Context context){
         return context.getString(R.string.last_update_test_preferences) + "_" + context.getPackageName();
     }
+
 }
