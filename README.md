@@ -4,7 +4,7 @@ The project aims to provide a reusable instrument to check asynchronously if exi
 
 It uses the Java HTML Parser [Jsoup](http://jsoup.org/) to test if a new update really exists parsing the app page on the Google Play Store.
 
-![Screenshot](https://raw.githubusercontent.com/danielemaddaluno/Android-Update-Checker/master/images/readme_info/readme_info.png)
+![Screenshot](https://raw.githubusercontent.com/danielemaddaluno/Android-Update-Checker/master/images/readme_info/readme_info_dark.png)
 
 
 ## Quick Setup
@@ -60,7 +60,7 @@ public class DemoUpdateCheckerActivity extends ActionBarActivity {
 ```
 
 ### 4. Proguard
-If you use Proguard you have to add the following lines to your Proguard rules:
+If you are using Proguard you have to add the following lines to your Proguard rules:
 ``` java
 -keep public class org.jsoup.** {
 public *;
