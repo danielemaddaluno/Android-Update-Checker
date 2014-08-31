@@ -63,7 +63,7 @@ public class DemoUpdateCheckerActivity extends ActionBarActivity {
 If you are using Proguard you have to add the following lines to your Proguard rules:
 ``` java
 -keep public class org.jsoup.** {
-public *;
+    public *;
 }
 ```
 
