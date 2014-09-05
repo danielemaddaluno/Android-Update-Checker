@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2014 Daniele Maddaluno
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources>
+    <string name="last_update_test_preferences">Last_Update_Check</string>
+
+    <string name="ok">OK</string>
+    <string name="yes">JA</string>
+    <string name="no">NEIN</string>
+
+    <string name="please_wait">Warten Sie bitte</string>
+    <string name="loading">Laden&#8230;</string>
+    <string name="update_test">Aktualisierungen suchen&#8230;</string>
+
+    <string name="you_are_updated_title">Ihre App ist bereits aktualisiert</string>
+    <string name="you_are_not_updated_title">Ihre App ist nicht aktualisiert</string>
+    <string name="you_are_updated_message">Ihre App ist bereits auf die neueste verfügbare Version aktualisiert.\nDrücken Sie OK zum beenden.</string>
+    <string name="you_are_not_updated_message">Drücken Sie auf JA um die App über Google Play zu aktualisieren, drücken Sie NEIN zum beenden.</string>
+</resources>
