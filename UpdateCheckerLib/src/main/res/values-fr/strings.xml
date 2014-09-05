@@ -21,12 +21,12 @@
     <string name="yes">OUI</string>
     <string name="no">NON</string>
 
-    <string name="please_wait">Attendez, s'il vous plaît</string>
+    <string name="please_wait">Attendez, s\'il vous plaît</string>
     <string name="loading">Chargement en cours&#8230;</string>
     <string name="update_test">Vérification des mises à jour&#8230;</string>
 
-    <string name="you_are_updated_title">L'application est déjà à jour</string>
-    <string name="you_are_not_updated_title">L'application n'est pas mise à jour</string>
+    <string name="you_are_updated_title">L\'application est déjà à jour</string>
+    <string name="you_are_not_updated_title">L\'application n\'est pas mise à jour</string>
     <string name="you_are_updated_message">Votre application est déjà mise à jour à la dernière version disponible.\nAppuyez sur OK pour quitter.</string>
-    <string name="you_are_not_updated_message">Appuyez sur OUI pour mettre à jour l'application sur Google Play, appuyez sur NON pour quitter.</string>
+    <string name="you_are_not_updated_message">Appuyez sur OUI pour mettre à jour l\'application sur Google Play, appuyez sur NON pour quitter.</string>
 </resources>
