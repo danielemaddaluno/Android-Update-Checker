@@ -10,7 +10,7 @@ It uses the Java HTML Parser [Jsoup](http://jsoup.org/) to test if a new update 
 ## Quick Setup
 
 ### 1. Include library
-#### Automatically:
+#### Automatically ([ ![Download](https://api.bintray.com/packages/danielemaddaluno/maven/androidupdatechecker/images/download.svg) ](https://bintray.com/danielemaddaluno/maven/androidupdatechecker/_latestVersion)):
 **Automatically with Gradle**
 ``` gradle
 dependencies {
