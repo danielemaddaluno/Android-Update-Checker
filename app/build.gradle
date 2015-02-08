@@ -21,8 +21,13 @@ android {
 }
 
 dependencies {
+    repositories {
+        maven {
+            url 'http://dl.bintray.com/danielemaddaluno/maven/'
+        }
+    }
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:+'
     compile 'com.google.android.gms:play-services:+'
-    compile project(':UpdateCheckerLib')
+    compile 'com.github.danielemaddaluno.androidupdatechecker:library:1.0.0'
 }

@@ -10,7 +10,42 @@ It uses the Java HTML Parser [Jsoup](http://jsoup.org/) to test if a new update 
 ## Quick Setup
 
 ### 1. Include library
+#### Automatically:
+** Automatically with Gradle **
+``` gradle
+dependencies {
+    repositories {
+        maven {
+            url 'http://dl.bintray.com/danielemaddaluno/maven/'
+        }
+    }
+    compile 'com.github.danielemaddaluno.androidupdatechecker:library:1.0.0'
+}
+```
+** Automatically with Maven **
+``` xml
 
+<project>
+...
+    <repositories>
+        <repository>
+            <id>danielemaddaluno</id>
+            <name>Daniele Maddaluno Bintray Repository</name>
+            <url>http://dl.bintray.com/danielemaddaluno/maven/</url>
+        </repository>
+    </repositories>
+    ...
+    <dependecies>
+        <dependency>
+            <groupId>com.github.danielemaddaluno.androidupdatechecker</groupId>
+            <artifactId>library</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependecies>
+...
+</project>
+```
+#### Manual:
 **Manual - Using [Android Studio](https://developer.android.com/sdk/installing/studio.html):**
  * Download the UpdateCheckerLib folder and import to your root application folder. 
 You can manually achieve this step with 3 steps: 

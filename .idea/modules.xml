@@ -3,9 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Android-Update-Checker.iml" filepath="$PROJECT_DIR$/Android-Update-Checker.iml" />
-      <module fileurl="file://$PROJECT_DIR$/UpdateChecker.iml" filepath="$PROJECT_DIR$/UpdateChecker.iml" />
-      <module fileurl="file://$PROJECT_DIR$/UpdateCheckerLib/UpdateCheckerLib.iml" filepath="$PROJECT_DIR$/UpdateCheckerLib/UpdateCheckerLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
     </modules>
   </component>
 </project>
