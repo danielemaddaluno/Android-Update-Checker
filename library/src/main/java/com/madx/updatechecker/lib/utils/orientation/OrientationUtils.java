@@ -19,6 +19,7 @@ package com.madx.updatechecker.lib.utils.orientation;
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.view.Surface;
@@ -26,6 +27,7 @@ import android.view.WindowManager;
 
 /** Static methods related to device orientation. */
 public class OrientationUtils {
+    // See constant value of orientations on http://developer.android.com/reference/android/R.attr.html#screenOrientation
 	private OrientationUtils() {}
 
 	/** Locks the device window in landscape mode. */
@@ -74,7 +76,16 @@ public class OrientationUtils {
 
 	/** Unlocks the device window in user defined screen mode. */
 	public static void unlockOrientation(Activity activity) {
-		activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_USER);
+        activity.setRequestedOrientation(getManifestOrientation(activity));
 	}
+
+    private static int getManifestOrientation(Activity activity){
+        try {
+            ActivityInfo app = activity.getPackageManager().getActivityInfo(activity.getComponentName(), PackageManager.GET_ACTIVITIES|PackageManager.GET_META_DATA);
+            return app.screenOrientation;
+        } catch (PackageManager.NameNotFoundException e) {
+            return ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED;
+        }
+    }
 
 }
