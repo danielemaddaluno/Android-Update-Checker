@@ -15,9 +15,10 @@ It uses the Java HTML Parser [Jsoup](http://jsoup.org/) to test if a new update 
 ``` gradle
 dependencies {
     repositories {
-        maven {
-            url 'http://dl.bintray.com/danielemaddaluno/maven/'
-        }
+		mavenCentral()
+//      maven {
+//          url 'http://dl.bintray.com/danielemaddaluno/maven/'
+//      }
     }
     compile 'com.github.danielemaddaluno.androidupdatechecker:library:+'
 }

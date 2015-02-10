@@ -3,7 +3,7 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: "com.jfrog.bintray"
 
 // This is the library version used when deploying the artifact
-version = "1.0.1"
+version = "1.0.2"
 
 android {
     compileSdkVersion 21
@@ -13,8 +13,8 @@ android {
         //applicationId "com.madx.updatechecker.lib"
         minSdkVersion 8
         targetSdkVersion 21
-        versionCode 2
-        versionName "1.0.1"
+        versionCode 3
+        versionName "1.0.2"
     }
     buildTypes {
         release {
@@ -44,6 +44,7 @@ install {
 
                 // Add your description here
                 name 'Android Update Checker'
+                description = 'The project aims to provide a reusable instrument to check asynchronously if exists any newer released update of your Android app on the Store.'
                 url siteUrl
 
                 // Set your license
@@ -107,17 +108,17 @@ bintray {
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
         publish = true
-//        version {
-//            gpg {
-//                sign = true //Determines whether to GPG sign the files. The default is false
-//                passphrase = properties.getProperty("bintray.gpg.password") //Optional. The passphrase for GPG signing'
-//            }
+        version {
+            gpg {
+                sign = true //Determines whether to GPG sign the files. The default is false
+                passphrase = properties.getProperty("bintray.gpg.password") //Optional. The passphrase for GPG signing'
+            }
 //            mavenCentralSync {
 //                sync = true //Optional (true by default). Determines whether to sync the version to Maven Central.
 //                user = properties.getProperty("bintray.oss.user") //OSS user token
 //                password = properties.getProperty("bintray.oss.password") //OSS user password
 //                close = '1' //Optional property. By default the staging repository is closed and artifacts are released to Maven Central. You can optionally turn this behaviour off (by puting 0 as value) and release the version manually.
 //            }
-//        }
+        }
     }
 }

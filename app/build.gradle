@@ -8,8 +8,8 @@ android {
         applicationId "com.madx.updatechecker"
         minSdkVersion 8
         targetSdkVersion 21
-        versionCode 7
-        versionName "1.0.6"
+        versionCode 8
+        versionName "1.0.7"
     }
     buildTypes {
         release {
@@ -22,9 +22,10 @@ android {
 
 dependencies {
     repositories {
-        maven {
-            url 'http://dl.bintray.com/danielemaddaluno/maven/'
-        }
+        mavenCentral()
+//        maven {
+//            url 'http://dl.bintray.com/danielemaddaluno/maven/'
+//        }
     }
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:+'
