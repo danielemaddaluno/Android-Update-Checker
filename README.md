@@ -19,7 +19,7 @@ dependencies {
             url 'http://dl.bintray.com/danielemaddaluno/maven/'
         }
     }
-    compile 'com.github.danielemaddaluno.androidupdatechecker:library:1.0.0'
+    compile 'com.github.danielemaddaluno.androidupdatechecker:library:+'
 }
 ```
 **Automatically with Maven**
@@ -39,7 +39,7 @@ dependencies {
         <dependency>
             <groupId>com.github.danielemaddaluno.androidupdatechecker</groupId>
             <artifactId>library</artifactId>
-            <version>1.0.0</version>
+            <version>LATEST</version>
         </dependency>
     </dependecies>
 ...
