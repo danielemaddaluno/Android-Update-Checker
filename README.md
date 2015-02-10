@@ -54,15 +54,15 @@ You can manually achieve this step with 3 steps:
     2. Add to your settings.gradle file the following code line:
     "include ':app', ':UpdateCheckerLib'"
     3. Rebuild the project
- * File -> Project Structure -> in Modules section click on "app" -> Click on tab "Dependecies" -> Click on the green plus -> Module Dependecy -> Select ":UpdateCheckerLib"
+ * File → Project Structure → in Modules section click on "app" → Click on tab "Dependecies" → Click on the green plus → Module Dependecy → Select ":UpdateCheckerLib"
  * Done =)
 
 or
 
 **Manual - Using [Eclipse ADT](http://developer.android.com/sdk/index.html)**
 * Download the UpdateCheckerLib folder and import into the workspace
-* Right click on the project imported -> Properties -> Android -> Check the box "Is Library"
-* Right click on the Main Project -> Properties -> Android -> Add -> Select UpdateCheckerLib -> OK
+* Right click on the project imported → Properties → Android → Check the box "Is Library"
+* Right click on the Main Project → Properties → Android → Add → Select UpdateCheckerLib → OK
 
 
 ### 2. Android Manifest
