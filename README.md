@@ -14,6 +14,13 @@ It uses the Java HTML Parser [Jsoup](http://jsoup.org/) to test if a new update 
 **Automatically with Gradle**
 ``` gradle
 dependencies {
+    compile 'com.github.danielemaddaluno.androidupdatechecker:library:1.0.2'
+}
+```
+Remember to replace "1.0.2" with the latest version available.<br><br>
+If you want to automatically take the latest version, you could use this:
+``` gradle
+dependencies {
     repositories {
 		mavenCentral()
 //      maven {
