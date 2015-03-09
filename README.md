@@ -111,7 +111,7 @@ If you are using Proguard you have to add the following lines to your Proguard r
 ```
 
 ## Applications using Android Update Checker
-**[Indian Rail Salary Calculator](https://play.google.com/store/apps/details?id=com.cr.taxc.activity&hl=en)** | **[amaze](https://play.google.com/store/apps/details?id=kongligit.amaze.android)** | **[Italia Notizie - IT News](https://play.google.com/store/apps/details?id=com.madx.pratonews)**
+**[Indian Rail Salary Calculator](https://play.google.com/store/apps/details?id=com.cr.taxc.activity&hl=en)** | **[Školníček Gymspk](https://play.google.com/store/apps/details?id=cz.hoky.gympsk)** | **[amaze](https://play.google.com/store/apps/details?id=kongligit.amaze.android)** | **[Italia Notizie - IT News](https://play.google.com/store/apps/details?id=com.madx.pratonews)**
 
 ## License
 
