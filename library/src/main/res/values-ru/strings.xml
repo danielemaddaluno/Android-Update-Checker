@@ -25,8 +25,8 @@
     <string name="loading">Загрузка&#8230;</string>
     <string name="update_test">Проверка обновлений&#8230;</string>
 
-    <string name="you_are_updated_title">Приложение уже обновлены</string>
-    <string name="you_are_not_updated_title">Приложение не обновляется</string>
-    <string name="you_are_updated_message">Ваша заявка уже обновлен до последней доступной версии.\nНажмите OK, чтобы выйти.</string>
-    <string name="you_are_not_updated_message">Не Нажмите ДА, чтобы обновлять приложения на Google Play, нажмите НЕТ для выхода.</string>
+     <string name="you_are_updated_title">Приложение уже обновлено</string>
+    <string name="you_are_not_updated_title">Доступна новая версия приложения</string>
+    <string name="you_are_updated_message">Ваше приложение уже обновлено до последней версии.\nНажмите OK, чтобы выйти.</string>
+    <string name="you_are_not_updated_message">Нажмите ДА, чтобы обновить приложение на Google Play, нажмите НЕТ для выхода.</string>
 </resources>
