@@ -1,4 +1,4 @@
-# ![Logo](https://raw.githubusercontent.com/danielemaddaluno/Android-Update-Checker/master/app/src/main/res/drawable-mdpi/ic_launcher.png) Android Update Checker [![Google Play](http://developer.android.com/images/brand/en_generic_rgb_wo_60.png)](https://play.google.com/store/apps/details?id=com.madx.updatechecker)
+# ![Logo](https://raw.githubusercontent.com/danielemaddaluno/Android-Update-Checker/master/app/src/main/res/drawable-mdpi/ic_launcher.png) Android Update Checker <a href="https://play.google.com/store/apps/details?id=com.madx.updatechecker&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-AC-global-none-all-co-pr-py-PartBadges-Oct1515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge-border.png" width="180"/></a>
 
 The project aims to provide a reusable instrument to check asynchronously if exists any newer released update of your app on the Store.
 
