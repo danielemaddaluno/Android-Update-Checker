@@ -216,13 +216,13 @@ public class UpdateRunnable implements Runnable {
      */
     private boolean web_update() {
         try {
-            String new_version = Jsoup.connect("https://play.google.com/store/apps/details?id=" + package_name + "&hl=it")
+            String new_version = Jsoup.connect("https://play.google.com/store/apps/details?id=" + package_name + "&hl=en")
                     .timeout(30000)
                     .userAgent("Mozilla/5.0 (Windows; U; WindowsNT 5.1; en-US; rv1.8.1.6) Gecko/20070725 Firefox/2.0.0.6")
                     .referrer("http://www.google.com")
                     .get()
-                    .select("div[itemprop=softwareVersion]")
-                    .first()
+                    .select(".W4P4ne div.hAyfc span.htlgb span.htlgb")
+                    .get(3)
                     .ownText();
             return newer_version_available(current_version, new_version);
         } catch (Exception e) {

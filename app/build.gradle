@@ -1,23 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion '21.0.0'
+    compileSdkVersion compileSdk
 
     defaultConfig {
         applicationId "com.madx.updatechecker"
-        minSdkVersion 8
-        targetSdkVersion 21
-        versionCode 8
-        versionName "1.0.7"
+        minSdkVersion minSdk
+        targetSdkVersion targetSdk
+        multiDexEnabled true
+        versionCode 9
+        versionName "1.0.8"
     }
-    buildTypes {
-        release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            zipAlignEnabled true
-        }
-    }
+
 }
 
 dependencies {
@@ -27,9 +21,13 @@ dependencies {
 //            url 'http://dl.bintray.com/danielemaddaluno/maven/'
 //        }
     }
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:+'
-    compile 'com.google.android.gms:play-services:+'
-    compile 'com.github.danielemaddaluno.androidupdatechecker:library:+'
-//    compile project(':library')
+
+    testImplementation 'junit:junit:4.12'
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'org.jsoup:jsoup:1.8.1'
+    implementation "androidx.appcompat:appcompat:${androidXVersion}"
+    compile project(':library')
+
+//    implementation 'com.github.danielemaddaluno.androidupdatechecker:library:+'
 }

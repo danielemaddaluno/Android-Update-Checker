@@ -16,38 +16,30 @@
 
 package com.madx.updatechecker;
 
-import android.os.Handler;
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.madx.updatechecker.lib.UpdateRunnable;
 
 
-public class DemoUpdateCheckerActivity extends ActionBarActivity {
+public class DemoUpdateCheckerActivity extends Activity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo_update_checker);
         new UpdateRunnable(this, new Handler()).start();
-        setAds();
     }
 
-    /** Called when the user clicks the Send button */
+    /**
+     * Called when the user clicks the Send button
+     */
     public void forceUpdateTest(View view) {
-        if(view.getId() == R.id.button_force_update_test){
+        if (view.getId() == R.id.button_force_update_test) {
             new UpdateRunnable(this, new Handler()).force(true).start();
         }
     }
 
-    private void setAds(){
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .addTestDevice(getResources().getString(R.string.test_device))
-                .build();
-        mAdView.loadAd(adRequest);
-    }
 }

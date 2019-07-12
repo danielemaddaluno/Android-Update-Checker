@@ -21,11 +21,8 @@
         If the Update Check is requested by a user action you can call the following code line (you can test this function by clicking the button above):\n
         <b><i>new UpdateRunnable(this, new Handler()).force(true).start();</i></b>\n\n
         Otherwise if you want to use the Update Checker automatically, you can call from the <i>onCreate()</i> of your activity the following code line, which will test for updates automatically once a day:\n
-        <b><i>new UpdateRunnable(this, new Handler()).start();</i></b>\n\n
-        <b><i>Support the developer clicking the ad!</i></b>
+        <b><i>new UpdateRunnable(this, new Handler()).start();</i></b>
     </string>
     <string name="action_settings">Settings</string>
     <string name="button_force_update_test">Force Update Check</string>
-    <string name="banner_ad_unit_id">ca-app-pub-XXXXXXXXXXXXXXXX/xxxxxxxxxx</string>
-    <string name="test_device">2E10E1D96F4634B6C6F97CF9950560E3</string>
 </resources>
